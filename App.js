@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { View } from 'react-native';
 
-export default class PizzaTranslator extends Component {
-
-  state = {text: ''};
-  
+export default class FixedDimensionsBasics extends Component {
   render() {
     return (
-      <View style={{padding: 10}}>
-        <TextInput
-          style={{height: 40}}
-          placeholder="Type here to translate!"
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-        />
-        <Text style={{padding: 10, fontSize: 42}}>
-          {this.state.text.split('').map((word) => word && '🍕').join(' ')}
-        </Text>
+      
+      <View style={{
+        flex: 1,
+        flexWrap: 'wrap'
+      }}>
+        <View style={{width: 50, height: 100, backgroundColor: 'powderblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'skyblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 100, backgroundColor: 'powderblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'skyblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 100, backgroundColor: 'powderblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'skyblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 100, backgroundColor: 'powderblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'skyblue'}} />
+        <View style={{height: 100, width: 50, backgroundColor: 'steelblue'}} />
+
       </View>
+ 
     );
   }
-}
+};
